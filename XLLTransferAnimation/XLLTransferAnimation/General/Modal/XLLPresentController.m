@@ -7,23 +7,23 @@
 //
 
 #import "XLLPresentController.h"
-#import "XLLModalTransition.h"
+#import "XLLTransferDelegate.h"
 #import "XLLNavigationController.h"
 
 @interface XLLPresentController ()
 
-@property (nonatomic, strong) XLLModalTransition *modalTransition;
+@property (nonatomic, strong) XLLTransferDelegate *modalTransition;
 
 @end
 
 @implementation XLLPresentController
 
 #pragma mark - lazy loading
-- (XLLModalTransition *)modalTransition
+- (XLLTransferDelegate *)modalTransition
 {
     if (_modalTransition == nil)
     {
-        _modalTransition = [[XLLModalTransition alloc] init];
+        _modalTransition = [[XLLTransferDelegate alloc] initWithAnimationStyle:XLLAnimationStyleCircle InteractiveStyle:XLLTransferInteractiveModal];
     }
     return _modalTransition;
 }
@@ -58,7 +58,7 @@
 
 - (void)dealloc
 {
-    NSLog(@"撤退");
+    NSLog(@"%s", __func__);
 }
 
 - (void)didReceiveMemoryWarning {

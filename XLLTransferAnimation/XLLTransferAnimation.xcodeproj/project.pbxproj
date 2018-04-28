@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A96F419C2091AFFD006C2CB0 /* XLLModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A96F419B2091AFFD006C2CB0 /* XLLModalTransition.m */; };
-		A96F419F2091B049006C2CB0 /* XLLPushPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A96F419E2091B049006C2CB0 /* XLLPushPopTransition.m */; };
+		A9322094209419C100EC0863 /* XLLTransferAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A932208D209419C100EC0863 /* XLLTransferAnimation.m */; };
+		A9322095209419C100EC0863 /* XLLTransferDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9322090209419C100EC0863 /* XLLTransferDelegate.m */; };
+		A9322096209419C100EC0863 /* XLLTransferInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = A9322093209419C100EC0863 /* XLLTransferInteractive.m */; };
 		A97D32AA2092D862006F40BA /* XLLKuGouController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D32A92092D862006F40BA /* XLLKuGouController.m */; };
 		A97D32AD2092E4CB006F40BA /* XLLTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D32AC2092E4CB006F40BA /* XLLTestController.m */; };
 		A97D32B8209313C8006F40BA /* XLLPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D32B7209313C8006F40BA /* XLLPushController.m */; };
@@ -16,7 +17,6 @@
 		A9C7A18C209024B100DA1951 /* XLLPresentController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C7A18B209024B100DA1951 /* XLLPresentController.m */; };
 		A9C7A18F209024C200DA1951 /* XLLDismissController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C7A18E209024C200DA1951 /* XLLDismissController.m */; };
 		A9C7A19220905C4000DA1951 /* XLLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C7A19120905C4000DA1951 /* XLLNavigationController.m */; };
-		A9C7A19B20905DF900DA1951 /* XLLTransferInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C7A19A20905DF900DA1951 /* XLLTransferInteractive.m */; };
 		A9E0D0F9208F0D5E00C1533B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E0D0F7208F0D5E00C1533B /* Main.storyboard */; };
 		A9E0D0FB208F0D5E00C1533B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9E0D0FA208F0D5E00C1533B /* Assets.xcassets */; };
 		A9E0D0FE208F0D5E00C1533B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E0D0FC208F0D5E00C1533B /* LaunchScreen.storyboard */; };
@@ -24,7 +24,6 @@
 		A9E0D10B208F0D5E00C1533B /* XLLTransferAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E0D10A208F0D5E00C1533B /* XLLTransferAnimationTests.m */; };
 		A9E0D11B208F0EAF00C1533B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E0D117208F0EAF00C1533B /* ViewController.m */; };
 		A9E0D11C208F0EAF00C1533B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E0D11A208F0EAF00C1533B /* AppDelegate.m */; };
-		A9E0D126208F184D00C1533B /* XLLTransferAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E0D125208F184D00C1533B /* XLLTransferAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A96F419A2091AFFD006C2CB0 /* XLLModalTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLModalTransition.h; sourceTree = "<group>"; };
-		A96F419B2091AFFD006C2CB0 /* XLLModalTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLModalTransition.m; sourceTree = "<group>"; };
-		A96F419D2091B049006C2CB0 /* XLLPushPopTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLPushPopTransition.h; sourceTree = "<group>"; };
-		A96F419E2091B049006C2CB0 /* XLLPushPopTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLPushPopTransition.m; sourceTree = "<group>"; };
+		A932208C209419C100EC0863 /* XLLTransferAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLTransferAnimation.h; sourceTree = "<group>"; };
+		A932208D209419C100EC0863 /* XLLTransferAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLTransferAnimation.m; sourceTree = "<group>"; };
+		A932208F209419C100EC0863 /* XLLTransferDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLTransferDelegate.h; sourceTree = "<group>"; };
+		A9322090209419C100EC0863 /* XLLTransferDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLTransferDelegate.m; sourceTree = "<group>"; };
+		A9322092209419C100EC0863 /* XLLTransferInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLTransferInteractive.h; sourceTree = "<group>"; };
+		A9322093209419C100EC0863 /* XLLTransferInteractive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLTransferInteractive.m; sourceTree = "<group>"; };
 		A97D32A82092D862006F40BA /* XLLKuGouController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLKuGouController.h; sourceTree = "<group>"; };
 		A97D32A92092D862006F40BA /* XLLKuGouController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLKuGouController.m; sourceTree = "<group>"; };
 		A97D32AB2092E4CB006F40BA /* XLLTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLTestController.h; sourceTree = "<group>"; };
@@ -56,8 +57,6 @@
 		A9C7A18E209024C200DA1951 /* XLLDismissController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLDismissController.m; sourceTree = "<group>"; };
 		A9C7A19020905C4000DA1951 /* XLLNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLNavigationController.h; sourceTree = "<group>"; };
 		A9C7A19120905C4000DA1951 /* XLLNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLNavigationController.m; sourceTree = "<group>"; };
-		A9C7A19920905DF900DA1951 /* XLLTransferInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLTransferInteractive.h; sourceTree = "<group>"; };
-		A9C7A19A20905DF900DA1951 /* XLLTransferInteractive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLTransferInteractive.m; sourceTree = "<group>"; };
 		A9E0D0EE208F0D5E00C1533B /* XLLTransferAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLLTransferAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E0D0F8208F0D5E00C1533B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9E0D0FA208F0D5E00C1533B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,8 +70,6 @@
 		A9E0D117208F0EAF00C1533B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A9E0D119208F0EAF00C1533B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9E0D11A208F0EAF00C1533B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A9E0D124208F184D00C1533B /* XLLTransferAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLTransferAnimation.h; sourceTree = "<group>"; };
-		A9E0D125208F184D00C1533B /* XLLTransferAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLTransferAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,22 +90,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A96F41952091AFA9006C2CB0 /* PushPopDelegate */ = {
+		A932208A209419C100EC0863 /* XLLTransfer */ = {
 			isa = PBXGroup;
 			children = (
-				A96F419D2091B049006C2CB0 /* XLLPushPopTransition.h */,
-				A96F419E2091B049006C2CB0 /* XLLPushPopTransition.m */,
+				A932208B209419C100EC0863 /* TransferAnimation */,
+				A9322091209419C100EC0863 /* TransferInteractive */,
+				A932208E209419C100EC0863 /* TransferDelegate */,
 			);
-			path = PushPopDelegate;
+			path = XLLTransfer;
 			sourceTree = "<group>";
 		};
-		A96F41962091AFB0006C2CB0 /* ModalDelegate */ = {
+		A932208B209419C100EC0863 /* TransferAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				A96F419A2091AFFD006C2CB0 /* XLLModalTransition.h */,
-				A96F419B2091AFFD006C2CB0 /* XLLModalTransition.m */,
+				A932208C209419C100EC0863 /* XLLTransferAnimation.h */,
+				A932208D209419C100EC0863 /* XLLTransferAnimation.m */,
 			);
-			path = ModalDelegate;
+			path = TransferAnimation;
+			sourceTree = "<group>";
+		};
+		A932208E209419C100EC0863 /* TransferDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A932208F209419C100EC0863 /* XLLTransferDelegate.h */,
+				A9322090209419C100EC0863 /* XLLTransferDelegate.m */,
+			);
+			path = TransferDelegate;
+			sourceTree = "<group>";
+		};
+		A9322091209419C100EC0863 /* TransferInteractive */ = {
+			isa = PBXGroup;
+			children = (
+				A9322092209419C100EC0863 /* XLLTransferInteractive.h */,
+				A9322093209419C100EC0863 /* XLLTransferInteractive.m */,
+			);
+			path = TransferInteractive;
 			sourceTree = "<group>";
 		};
 		A97D32A72092D849006F40BA /* KuGou */ = {
@@ -125,7 +141,6 @@
 		A9C7A1822090248000DA1951 /* PushPop */ = {
 			isa = PBXGroup;
 			children = (
-				A96F41952091AFA9006C2CB0 /* PushPopDelegate */,
 				A97D32B6209313C8006F40BA /* XLLPushController.h */,
 				A97D32B7209313C8006F40BA /* XLLPushController.m */,
 				A97D32B9209313F9006F40BA /* XLLPopController.h */,
@@ -137,31 +152,12 @@
 		A9C7A1892090249900DA1951 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				A96F41962091AFB0006C2CB0 /* ModalDelegate */,
 				A9C7A18A209024B100DA1951 /* XLLPresentController.h */,
 				A9C7A18B209024B100DA1951 /* XLLPresentController.m */,
 				A9C7A18D209024C200DA1951 /* XLLDismissController.h */,
 				A9C7A18E209024C200DA1951 /* XLLDismissController.m */,
 			);
 			path = Modal;
-			sourceTree = "<group>";
-		};
-		A9C7A19420905CEB00DA1951 /* TransferAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				A9E0D124208F184D00C1533B /* XLLTransferAnimation.h */,
-				A9E0D125208F184D00C1533B /* XLLTransferAnimation.m */,
-			);
-			path = TransferAnimation;
-			sourceTree = "<group>";
-		};
-		A9C7A19820905DF900DA1951 /* TransferInteractive */ = {
-			isa = PBXGroup;
-			children = (
-				A9C7A19920905DF900DA1951 /* XLLTransferInteractive.h */,
-				A9C7A19A20905DF900DA1951 /* XLLTransferInteractive.m */,
-			);
-			path = TransferInteractive;
 			sourceTree = "<group>";
 		};
 		A9E0D0E5208F0D5E00C1533B = {
@@ -185,9 +181,10 @@
 		A9E0D0F0208F0D5E00C1533B /* XLLTransferAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				A9E0D11D208F0EB300C1533B /* SupportingFiles */,
-				A9E0D118208F0EAF00C1533B /* AppDelegate */,
+				A932208A209419C100EC0863 /* XLLTransfer */,
 				A9E0D115208F0EAF00C1533B /* General */,
+				A9E0D118208F0EAF00C1533B /* AppDelegate */,
+				A9E0D11D208F0EB300C1533B /* SupportingFiles */,
 			);
 			path = XLLTransferAnimation;
 			sourceTree = "<group>";
@@ -205,8 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				A97D32A72092D849006F40BA /* KuGou */,
-				A9C7A19420905CEB00DA1951 /* TransferAnimation */,
-				A9C7A19820905DF900DA1951 /* TransferInteractive */,
 				A9C7A1892090249900DA1951 /* Modal */,
 				A9C7A1822090248000DA1951 /* PushPop */,
 				A9E0D116208F0EAF00C1533B /* ViewController.h */,
@@ -341,18 +336,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97D32BB209313F9006F40BA /* XLLPopController.m in Sources */,
-				A9C7A19B20905DF900DA1951 /* XLLTransferInteractive.m in Sources */,
 				A97D32B8209313C8006F40BA /* XLLPushController.m in Sources */,
 				A9E0D101208F0D5E00C1533B /* main.m in Sources */,
 				A97D32AD2092E4CB006F40BA /* XLLTestController.m in Sources */,
+				A9322095209419C100EC0863 /* XLLTransferDelegate.m in Sources */,
+				A9322096209419C100EC0863 /* XLLTransferInteractive.m in Sources */,
 				A9C7A18F209024C200DA1951 /* XLLDismissController.m in Sources */,
 				A9E0D11B208F0EAF00C1533B /* ViewController.m in Sources */,
 				A97D32AA2092D862006F40BA /* XLLKuGouController.m in Sources */,
 				A9C7A19220905C4000DA1951 /* XLLNavigationController.m in Sources */,
+				A9322094209419C100EC0863 /* XLLTransferAnimation.m in Sources */,
 				A9E0D11C208F0EAF00C1533B /* AppDelegate.m in Sources */,
-				A96F419C2091AFFD006C2CB0 /* XLLModalTransition.m in Sources */,
-				A96F419F2091B049006C2CB0 /* XLLPushPopTransition.m in Sources */,
-				A9E0D126208F184D00C1533B /* XLLTransferAnimation.m in Sources */,
 				A9C7A18C209024B100DA1951 /* XLLPresentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

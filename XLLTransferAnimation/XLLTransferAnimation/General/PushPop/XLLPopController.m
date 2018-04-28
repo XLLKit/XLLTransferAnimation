@@ -28,7 +28,7 @@
 
 - (void)dealloc
 {
-    NSLog(@"我撤啦");
+    NSLog(@"%s", __func__);
 }
 
 - (void)didReceiveMemoryWarning {

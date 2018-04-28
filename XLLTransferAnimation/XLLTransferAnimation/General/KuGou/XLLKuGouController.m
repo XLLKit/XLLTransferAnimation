@@ -7,23 +7,23 @@
 //
 
 #import "XLLKuGouController.h"
-#import "XLLModalTransition.h"
+#import "XLLTransferDelegate.h"
 #import "XLLTestController.h"
 
 @interface XLLKuGouController ()
 
-@property (nonatomic, strong) XLLModalTransition *modalTransition;
+@property (nonatomic, strong) XLLTransferDelegate *modalTransition;
 
 @end
 
 @implementation XLLKuGouController
 
 #pragma mark - lazy loading
-- (XLLModalTransition *)modalTransition
+- (XLLTransferDelegate *)modalTransition
 {
     if (_modalTransition == nil)
     {
-        _modalTransition = [[XLLModalTransition alloc] init];
+        _modalTransition = [[XLLTransferDelegate alloc] initWithAnimationStyle:XLLAnimationStyleKuGou InteractiveStyle:XLLTransferInteractiveModal];
     }
     return _modalTransition;
 }
@@ -57,7 +57,7 @@
 
 - (void)dealloc
 {
-    NSLog(@"撤撤撤");
+    NSLog(@"%s", __func__);
 }
 
 - (void)didReceiveMemoryWarning {

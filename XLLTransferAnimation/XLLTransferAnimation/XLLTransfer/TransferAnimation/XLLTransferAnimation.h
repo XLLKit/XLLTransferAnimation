@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, XLLAnimationStyle) {
 - (instancetype)initWithAnimationStyle:(XLLAnimationStyle)animationStyle;
 
 /**
- 转场类型
+ 具体转场类型
  */
 @property (nonatomic, assign) XLLTransferStyle transferStyle;
 

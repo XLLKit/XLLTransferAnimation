@@ -8,23 +8,23 @@
 
 #import "XLLPushController.h"
 #import "XLLPopController.h"
-#import "XLLPushPopTransition.h"
+#import "XLLTransferDelegate.h"
 
 @interface XLLPushController () <CAAnimationDelegate>
 
 @property (nonatomic, weak) UIView *testView;
-@property (nonatomic, strong) XLLPushPopTransition *showTransition;
+@property (nonatomic, strong) XLLTransferDelegate *showTransition;
 
 @end
 
 @implementation XLLPushController
 
 #pragma mark - lazy loading
-- (XLLPushPopTransition *)showTransition
+- (XLLTransferDelegate *)showTransition
 {
     if (_showTransition == nil)
     {
-        _showTransition = [[XLLPushPopTransition alloc] init];
+        _showTransition = [[XLLTransferDelegate alloc] initWithAnimationStyle:XLLAnimationStyleDoor InteractiveStyle:XLLTransferInteractiveShow];
     }
     return _showTransition;
 }
@@ -101,7 +101,7 @@
 
 - (void)dealloc
 {
-    NSLog(@"---");
+    NSLog(@"%s", __func__);
 }
 
 - (void)didReceiveMemoryWarning {
