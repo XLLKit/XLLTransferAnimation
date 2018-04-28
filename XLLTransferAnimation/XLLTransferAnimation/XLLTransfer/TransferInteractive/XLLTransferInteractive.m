@@ -82,7 +82,8 @@
             {
                 [self finishInteractiveTransition];
             } else {
-                //这里首先将进度更为0.否则会有莫名bug
+                //这里首先将进度更为0.否则会有闪烁bug。
+                //原因已定位,目前还没来得及解决
                 [self updateInteractiveTransition:0];
                 [self cancelInteractiveTransition];
             }
