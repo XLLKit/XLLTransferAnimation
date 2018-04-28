@@ -51,13 +51,21 @@
                 } else {
                     [currentVC.navigationController popViewControllerAnimated:YES];
                 }
-            } else {
+            } else if (self.interactiveStyle == XLLTransferInteractiveModal) {
                 if ([currentVC isKindOfClass:[UINavigationController class]])
                 {
                     UINavigationController *nav = (UINavigationController *)currentVC;
                     [nav dismissViewControllerAnimated:YES completion:nil];
                 } else {
                     [currentVC dismissViewControllerAnimated:YES completion:nil];
+                }
+            } else if (self.interactiveStyle == XLLTransferInteractiveTabSelect) {
+                
+                if ([currentVC isKindOfClass:[UITabBarController class]])
+                {
+                    UITabBarController *tabVC = (UITabBarController *)currentVC;
+                    CGFloat velocityX = [panGesture velocityInView:panGesture.view].x;
+                    tabVC.selectedIndex = velocityX<0?tabVC.selectedIndex+1:tabVC.selectedIndex-1;
                 }
             }
         }

@@ -8,28 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "XLLTransferStyle.h"
 
 /**
- 转场类型
+ 具体转场类型
  */
 typedef NS_ENUM(NSInteger, XLLTransferStyle) {
     
-    XLLTransferStylePush = 1000, //push
-    XLLTransferStylePop,         //pop
-    XLLTransferStylePresent,     //present
-    XLLTransferStyleDismiss      //dismiss
+    XLLTransferStylePush = 1000,  //push
+    XLLTransferStylePop,          //pop
+    XLLTransferStylePresent,      //present
+    XLLTransferStyleDismiss,      //dismiss
+    XLLTransferStyleLeftDirection,//tabbar向左滑动
+    XLLTransferStyleRightDirection//tabbar向右滑动
 };
-
-/**
- 转场动画类型
- */
-typedef NS_ENUM(NSInteger, XLLAnimationStyle) {
-    
-    XLLAnimationStyleDoor = 1000, //开门动画
-    XLLAnimationStyleCircle,      //圆形扩展动画
-    XLLAnimationStyleKuGou        //酷狗音乐那种动画
-};
-
 
 @interface XLLTransferAnimation : NSObject <UIViewControllerAnimatedTransitioning>
 

@@ -7,15 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-/**
- 手势类型
- */
-typedef NS_ENUM(NSInteger, XLLInteractiveStyle) {
-    
-    XLLTransferInteractiveShow = 1000, //push pop
-    XLLTransferInteractiveModal        //present dismiss
-};
+#import "XLLTransferStyle.h"
 
 @interface XLLTransferInteractive : UIPercentDrivenInteractiveTransition
 

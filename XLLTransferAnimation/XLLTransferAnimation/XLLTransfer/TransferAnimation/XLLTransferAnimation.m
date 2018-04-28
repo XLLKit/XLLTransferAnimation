@@ -57,6 +57,9 @@
         case XLLTransferStyleDismiss:
         case XLLTransferStylePresent:
             return 0.35f;
+        case XLLTransferStyleLeftDirection:
+        case XLLTransferStyleRightDirection:
+            return 0.25f;
         default:
             break;
     }
@@ -95,6 +98,16 @@
             [self popOrDismissAnimateTransition:transitionContext];
         }
             break;
+        case XLLTransferStyleLeftDirection:
+        {
+            [self scrollTabAnimationTransition:transitionContext];
+        }
+            break;
+        case XLLTransferStyleRightDirection:
+        {
+            [self scrollTabAnimationTransition:transitionContext];
+        }
+            break;
             
         default:
             break;
@@ -123,6 +136,38 @@
 }
 
 #pragma mark - private method
+- (void)scrollTabAnimationTransition:(id <UIViewControllerContextTransitioning>)transitionContext
+{
+    switch (self.animationStyle) {
+        case XLLAnimationStyleTab:
+        {
+            //tabbar转场专用
+            //取出专场前后view
+            UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+            UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
+            //转场容器
+            UIView *containerView = transitionContext.containerView;
+            [containerView addSubview:toView];
+            CGFloat spacingX = self.transferStyle == XLLTransferStyleRightDirection?-containerView.frame.size.width:containerView.frame.size.width;
+            toView.transform = CGAffineTransformTranslate(toView.transform, -spacingX, 0);
+            [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+                
+                fromView.transform = CGAffineTransformTranslate(fromView.transform, spacingX, 0);
+                toView.transform = CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                
+                fromView.transform = CGAffineTransformIdentity;
+                toView.transform = CGAffineTransformIdentity;
+                [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+            }];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 //根据设定的动画搞起来
 - (void)pushOrPresentAnimateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
@@ -357,19 +402,18 @@ float calculateAB (float x, float y) {
     //2.转场期间容器
     UIView *containerView = transitionContext.containerView;
     //3.创建左右门🚪
-    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(-toView.frame.size.width * 0.5, 0, toView.frame.size.width * 0.5, toView.frame.size.height)];
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(-toView.frame.size.width * 0.5, 0, toView.frame.size.width * 0.5, toView.frame.size.height + 64)];
     leftView.clipsToBounds = YES;
     [leftView addSubview:toView];
     
     // 使用系统自带的snapshotViewAfterScreenUpdates:方法，参数为YES，代表视图的属性改变渲染完毕后截屏，参数为NO代表立刻将当前状态的视图截图
     UIView *snapShotView2 = [toView snapshotViewAfterScreenUpdates:YES];
     snapShotView2.frame = CGRectMake(-toView.frame.size.width * 0.5, 0, toView.frame.size.width, toView.frame.size.height);
-    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(toView.frame.size.width, 0, toView.frame.size.width * 0.5, toView.frame.size.height)];
+    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(toView.frame.size.width, 64, toView.frame.size.width * 0.5, toView.frame.size.height)];
     rightView.clipsToBounds = YES;
     [rightView addSubview:snapShotView2];
     
     //将需要的视图加入到容器中
-    [containerView addSubview:fromView];
     [containerView addSubview:leftView];
     [containerView addSubview:rightView];
     //4.开启动画
@@ -405,13 +449,13 @@ float calculateAB (float x, float y) {
     UIView *containerView = transitionContext.containerView;
     //4.创建一个左视图,并将控制器截图放置上去
     UIView *snapShotView1 = [fromView snapshotViewAfterScreenUpdates:NO];
-    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, fromView.frame.size.width * 0.5, fromView.frame.size.height)];
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, fromView.frame.size.width * 0.5, fromView.frame.size.height)];
     leftView.clipsToBounds = YES;
     [leftView addSubview:snapShotView1];
     //5.创建一个右视图,并将控制器截图放置上去
     UIView *snapShotView2 = [fromView snapshotViewAfterScreenUpdates:NO];
     snapShotView2.frame = CGRectMake(-fromView.frame.size.width * 0.5, 0, fromView.frame.size.width, fromView.frame.size.height);
-    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(fromView.frame.size.width * 0.5, 0, fromView.frame.size.width * 0.5, fromView.frame.size.height)];
+    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(fromView.frame.size.width * 0.5, 64, fromView.frame.size.width * 0.5, fromView.frame.size.height)];
     rightView.clipsToBounds = YES;
     [rightView addSubview:snapShotView2];
     //6.将转场时的View放置转场容器中,并隐藏前控制器view

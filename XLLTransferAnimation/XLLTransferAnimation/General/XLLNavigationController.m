@@ -14,6 +14,14 @@
 
 @implementation XLLNavigationController
 
++ (void)initialize
+{
+    // 本类navigationbar
+    UINavigationBar *navigationBar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
+    [navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    navigationBar.translucent = NO;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -29,6 +37,18 @@
     //5.禁止使用系统自带的滑动手势
     self.interactivePopGestureRecognizer.enabled = NO;
 }
+
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    
+    if (self.viewControllers.count > 0) {
+        
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    [super pushViewController:viewController animated:animated];
+}
+
 
 #pragma mark -- UIGestureRecognizerDelegate
 // 什么时候调用：每次触发手势之前都会询问下代理，是否触发。

@@ -7,6 +7,8 @@
 //
 
 #import "XLLTransferDelegate.h"
+#import "XLLTransferAnimation.h"
+#import "XLLTransferInteractive.h"
 
 @interface XLLTransferDelegate ()
 

@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "XLLTransferAnimation.h"
-#import "XLLTransferInteractive.h"
+#import "XLLTransferStyle.h"
 
 @interface XLLTransferDelegate : NSObject <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
