@@ -15,6 +15,8 @@
 		A932209D20943FC700EC0863 /* UITabBarController+XLLTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = A932209B20943FC700EC0863 /* UITabBarController+XLLTransfer.m */; };
 		A93220A92094652C00EC0863 /* XLLTabbarController.h in Headers */ = {isa = PBXBuildFile; fileRef = A93220A72094652C00EC0863 /* XLLTabbarController.h */; };
 		A93220AA2094652C00EC0863 /* XLLTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93220A82094652C00EC0863 /* XLLTabbarController.m */; };
+		A93220AE2094832600EC0863 /* XLLTabOutsideDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A93220AC2094832600EC0863 /* XLLTabOutsideDelegate.h */; };
+		A93220AF2094832600EC0863 /* XLLTabOutsideDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A93220AD2094832600EC0863 /* XLLTabOutsideDelegate.m */; };
 		A97D32AA2092D862006F40BA /* XLLKuGouController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D32A92092D862006F40BA /* XLLKuGouController.m */; };
 		A97D32AD2092E4CB006F40BA /* XLLTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D32AC2092E4CB006F40BA /* XLLTestController.m */; };
 		A97D32B8209313C8006F40BA /* XLLPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D32B7209313C8006F40BA /* XLLPushController.m */; };
@@ -53,6 +55,8 @@
 		A932209B20943FC700EC0863 /* UITabBarController+XLLTransfer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+XLLTransfer.m"; sourceTree = "<group>"; };
 		A93220A72094652C00EC0863 /* XLLTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLTabbarController.h; sourceTree = "<group>"; };
 		A93220A82094652C00EC0863 /* XLLTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLTabbarController.m; sourceTree = "<group>"; };
+		A93220AC2094832600EC0863 /* XLLTabOutsideDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLTabOutsideDelegate.h; sourceTree = "<group>"; };
+		A93220AD2094832600EC0863 /* XLLTabOutsideDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLTabOutsideDelegate.m; sourceTree = "<group>"; };
 		A97D32A82092D862006F40BA /* XLLKuGouController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLKuGouController.h; sourceTree = "<group>"; };
 		A97D32A92092D862006F40BA /* XLLKuGouController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLKuGouController.m; sourceTree = "<group>"; };
 		A97D32AB2092E4CB006F40BA /* XLLTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLTestController.h; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			children = (
 				A93220A72094652C00EC0863 /* XLLTabbarController.h */,
 				A93220A82094652C00EC0863 /* XLLTabbarController.m */,
+				A93220AC2094832600EC0863 /* XLLTabOutsideDelegate.h */,
+				A93220AD2094832600EC0863 /* XLLTabOutsideDelegate.m */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -263,6 +269,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93220AE2094832600EC0863 /* XLLTabOutsideDelegate.h in Headers */,
 				A932209C20943FC700EC0863 /* UITabBarController+XLLTransfer.h in Headers */,
 				A93220A92094652C00EC0863 /* XLLTabbarController.h in Headers */,
 				A932209920941BFE00EC0863 /* XLLTransferStyle.h in Headers */,
@@ -373,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97D32BB209313F9006F40BA /* XLLPopController.m in Sources */,
+				A93220AF2094832600EC0863 /* XLLTabOutsideDelegate.m in Sources */,
 				A97D32B8209313C8006F40BA /* XLLPushController.m in Sources */,
 				A9E0D101208F0D5E00C1533B /* main.m in Sources */,
 				A97D32AD2092E4CB006F40BA /* XLLTestController.m in Sources */,

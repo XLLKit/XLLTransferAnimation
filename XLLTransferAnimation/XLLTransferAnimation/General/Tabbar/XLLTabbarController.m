@@ -7,21 +7,35 @@
 //
 
 #import "XLLTabbarController.h"
+#import "XLLTabOutsideDelegate.h"
 #import "UITabBarController+XLLTransfer.h"
 
-@interface XLLTabbarController () <UITabBarControllerDelegate>
+@interface XLLTabbarController ()
+
+@property (nonatomic, strong) XLLTabOutsideDelegate *outDelegate;
 
 @end
 
 @implementation XLLTabbarController
+
+#pragma mark - lazy loading
+- (XLLTabOutsideDelegate *)outDelegate
+{
+    if (_outDelegate == nil)
+    {
+        _outDelegate = [[XLLTabOutsideDelegate alloc] init];
+    }
+    return _outDelegate;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.tabBar.translucent = NO;
-    self.delegate = self;
+    self.delegate = self.outDelegate;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
