@@ -10,6 +10,7 @@
 #import "XLLTransferAnimation.h"
 #import "XLLTransferInteractive.h"
 #import <objc/runtime.h>
+#import "XLLNavigationController.h"
 
 @interface XLLTabbarControllerDelegate : NSObject <UITabBarControllerDelegate>
 

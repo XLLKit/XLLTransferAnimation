@@ -64,6 +64,12 @@
                 if ([currentVC isKindOfClass:[UITabBarController class]])
                 {
                     UITabBarController *tabVC = (UITabBarController *)currentVC;
+                    UINavigationController *nav = tabVC.selectedViewController;
+                    if (nav.childViewControllers.count > 1)
+                    {
+                        // push到第二层，tabbar隐藏，就不需要转场了
+                        return;
+                    }
                     CGFloat velocityX = [panGesture velocityInView:panGesture.view].x;
                     tabVC.selectedIndex = velocityX<0?tabVC.selectedIndex+1:tabVC.selectedIndex-1;
                 }
